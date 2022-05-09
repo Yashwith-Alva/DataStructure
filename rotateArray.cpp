@@ -8,8 +8,17 @@ void Display(int arr[], int arrsize);
 
 int main()
 {
-    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int sizeArr = sizeof(arr) / sizeof(int);
+    // Request for Array.
+    int x;
+    std::cout << "Enter the size of array: ";
+    std::cin >> x;
+
+    int arr[100];
+    std::cout << "Enter Values: " << std::endl;
+    for (int i = 0; i < x; i++)
+        std::cin >> arr[i];
+
+    int sizeArr = x;
 
     LeftRotate(arr, 2, sizeArr);
     Display(arr, sizeArr);
